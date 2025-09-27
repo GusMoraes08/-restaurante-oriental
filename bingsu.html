@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingsu</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+     <style>
+        .menu-section {
+            padding: 40px 0;
+        }
+        .card-menu {
+            transition: transform 0.2s;
+            height: 100%; 
+        }
+        .card-menu:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* 1. Transição do Tamanho da Imagem (Apenas CSS) */
+        .product-img-container {
+            overflow: hidden; 
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            /* Adiciona a transição CSS */
+            transition: transform 0.3s ease-in-out; 
+            cursor: pointer;
+        }
+        .product-image:hover {
+            transform: scale(1.05); 
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .blink-text {
+            animation: blink 1.5s infinite; 
+            font-weight: bold;
+        }
+        
+        #email-submit:checked + .form-group .alert-success {
+            display: block !important;
+        }
+        
+        #email-submit:not(:checked) + .form-group .alert-success,
+        .email-feedback {
+            display: none;
+        }
+        #email-submit:checked + .form-group .form-control,
+        #email-submit:checked + .form-group .form-check,
+        #email-submit:checked + .form-group .btn {
+            display: none;
+        }
+        .hidden-submit {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="cardapio.html">Restaurante Kim Jo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#entradas">Entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#principais">Pratos Principais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobremesas">Sobremesas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <main class="container product-section">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg border-0">
+                    <div class="row g-0">
+                        
+                        <div class="col-md-5">
+                            <div class="product-img-container">
+                                <img src="Bingsu.jpg" 
+                                     class="product-image rounded-start" 
+                                     alt="Bingsu">
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 p-4">
+                            <div class="card-body">
+                                <h1 class="card-title display-5 text-primary mb-3">
+                                    Bingsu Tradicional
+                                </h1>
+                                <p class="card-text text-muted lead">
+                                    Sobremesa mais tradicional coreana.
+                                </p>
+                                <p class="card-text">
+                                    Gelo raspado à base de leite, coberto com uma variedade de ingredientes doces como feijão vermelho doce (pat), leite condensado, frutas, xaropes e até sorvete, em versões mais modernas.
+                                </p>
+
+                                <a href="#" class="btn btn-success btn-lg w-100 my-4 fw-bold">
+                                    <span class="blink-text">Pedir Agora (R$ 45,30)</span>
+                                </a>
+                                
+                                <hr>
+
+                                <h5 class="mt-4 mb-3 text-secondary">
+                                    Receba Promoções Deste Produto
+                                </h5>
+                                
+                                <div class="form-group">
+                                    <input type="checkbox" id="email-submit" class="d-none"> 
+
+                                    <div class="mb-3">
+                                        <input type="email" 
+                                               class="form-control" 
+                                               id="promoEmail" 
+                                               placeholder="Seu melhor e-mail aqui" 
+                                               required>
+                                    </div>
+
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" 
+                                               type="checkbox" 
+                                               id="termsCheck" 
+                                               required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            Eu aceito os <a href="#" class="text-decoration-none">termos de uso</a>.
+                                        </label>
+                                    </div>
+
+                                    <label for="email-submit" class="btn btn-outline-primary w-100">
+                                        Cadastrar
+                                    </label>
+                                    
+                                    <div class="alert alert-success mt-3 email-feedback" role="alert" style="display: none;">
+                                        E-mail cadastrado com sucesso!
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

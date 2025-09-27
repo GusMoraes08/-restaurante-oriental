@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+     <style>
+        .menu-section {
+            padding: 40px 0;
+        }
+        .card-menu {
+            transition: transform 0.2s;
+            height: 100%; /* Garante que os cards tenham a mesma altura na linha */
+        }
+        .card-menu:hover {
+            transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Restaurante Kim Jo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#entradas">Entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#principais">Pratos Principais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobremesas">Sobremesas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-5">
+
+        <h1 class="text-center mb-5 display-4 text-primary">Nosso Cardápio</h1>
+
+        <section id="entradas" class="menu-section">
+            <h2 class="border-bottom pb-2 mb-4 text-secondary">Entradas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="kimchi.html"><img src="Kimchi.jpg" class="card-img-top" alt="Kimchi"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Kimchi</h5>
+                            <p class="card-text"> Vegetais Fermentados - Acelga.</p>
+                            <span class="badge bg-warning fs-5">R$ 20,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="pajeon.html"><img src="Pajeon.jpg" class="card-img-top" alt="Pajeon"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Pajeon</h5>
+                            <p class="card-text">Massa de farinha de trigo e/ou arroz, e ovos.</p>
+                            <span class="badge bg-warning fs-5">R$ 22,00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="japachae.html"><img src="Japachae.png" class="card-img-top" alt="Japachae"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Japachae</h5>
+                            <p class="card-text">Macarrão Coreano.</p>
+                            <span class="badge bg-warning fs-5">R$ 35,00</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        ---
+
+        <section id="principais" class="menu-section">
+            <h2 class="border-bottom pb-2 mb-4 text-secondary">Pratos Principais</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="bibimbap.html"><img src="bibimbap.jpg" class="card-img-top" alt="Nome do Prato Principal 1"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Bibimbap</h5>
+                            <p class="card-text">Arroz branco, vegetais e carne misturados e preparados em tigela de pedra vulcânica.</p>
+                            <span class="badge bg-warning fs-5">R$ 77,50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="buldogi.html"><img src="buldogi.jpg" class="card-img-top" alt="Nome do Prato Principal 2"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Buldogi</h5>
+                            <p class="card-text">Carne marinada grelhada em molho de soja, alho picado e semente de gergelim, e servido com verduras.</p>
+                            <span class="badge bg-warning fs-5">R$ 98,50</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="Kimchi-Jjigae.html"><img src="Kimchi-Jjigae.jpg" class="card-img-top" alt="Nome do Prato Principal 3"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Kimchi Jjigae</h5>
+                            <p class="card-text">Kimchi, carne de porco, cebolinha, cebola e tofu em cubos.</p>
+                            <span class="badge bg-warning fs-5">R$ 85,90</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        ---
+
+        <section id="sobremesas" class="menu-section">
+            <h2 class="border-bottom pb-2 mb-4 text-secondary">Sobremesas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="bingsu.html"><img src="bingsu.jpg" class="card-img-top" alt="Nome da Sobremesa 1"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Bingsu</h5>
+                            <p class="card-text">Frutas picadas, leite condensado, xarope de frutas e doce de feijão vermelho.</p>
+                            <span class="badge bg-warning fs-5">R$ 45,30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="hotteok.html"><img src="hotteok.webp" class="card-img-top" alt="Nome da Sobremesa 2"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Hotteok</h5>
+                            <p class="card-text">Panqueca recheada</p>
+                            <span class="badge bg-warning fs-5">R$ 48,80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card-menu">
+                        <a href="Bungeoppang.html"><img src="Bungeoppang.webp" class="card-img-top" alt="Nome da Sobremesa 2"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Bungeoppang</h5>
+                            <p class="card-text">Massa em forma de peixe recheada com pasta de feijão vermelho adoçada</p>
+                            <span class="badge bg-warning fs-5">R$ 79,70</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
